@@ -3,17 +3,6 @@
 
 This repository contains a **3-tier Todo application** with **frontend**, **backend**, and **Postgres database**, fully containerized with Docker and deployable on Kubernetes (Minikube). This README guides a new user through setup, Docker usage, Kubernetes deployment, and provided helper scripts.
 
----
-
-## Table of Contents
-1. [Application Overview](#application-overview)
-2. [Docker Setup](#docker-setup)
-3. [Kubernetes Setup](#kubernetes-setup)
-4. [Helper Scripts](#helper-scripts)
-5. [Accessing the Application](#accessing-the-application)
-
----
-
 ## Application Overview
 
 The 3-tier architecture:
