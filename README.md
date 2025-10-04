@@ -197,4 +197,4 @@ With **Kubernetes (Minikube)**, you can deploy a scalable, containerized version
 
 All necessary helper scripts are included to make development, deployment, and redeployment seamless.
 
-```
+### Next phase we will go with first CI/CD then Cloud Services mostly (AWS - Amazon Web Servies)
