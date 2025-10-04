@@ -97,7 +97,7 @@ project-root/
 
 * **Namespace**: `3tier-app`
 * **Secrets**: `postgres-secret` (DB credentials)
-* **ConfigMap**: `app-config` (DATABASE_URL, BACKEND_URL, FRONTEND_URL)
+* **ConfigMap**: `namespace` (DATABASE_URL, BACKEND_URL, FRONTEND_URL , Note: currently included in namespace you can mantain other YAML file for it)
 * **Deployments**: frontend, backend, postgres
 * **Services**: frontend (NodePort), backend (ClusterIP), postgres (ClusterIP)
 * **PVC**: Postgres persistent storage
@@ -117,31 +117,25 @@ kubectl apply -f k8s/namespace.yaml
 kubectl apply -f k8s/secret.yaml
 ```
 
-3. Apply ConfigMap:
-
-```bash
-kubectl apply -f k8s/app-config.yaml
-```
-
-4. Deploy Postgres:
+3. Deploy Postgres:
 
 ```bash
 kubectl apply -f k8s/postgres.yaml
 ```
 
-5. Run Prisma migration (if using Prisma):
+4. Run Prisma migration (if using Prisma):
 
 ```bash
 kubectl apply -f k8s/prisma-job.yaml
 ```
 
-6. Deploy Backend:
+5. Deploy Backend:
 
 ```bash
 kubectl apply -f k8s/backend.yaml
 ```
 
-7. Deploy Frontend:
+6. Deploy Frontend:
 
 ```bash
 kubectl apply -f k8s/frontend.yaml
@@ -152,6 +146,13 @@ kubectl apply -f k8s/frontend.yaml
 ```bash
 minikube service frontend -n 3tier-app
 ```
+
+### Access Deployment Pods and your K8s
+
+```bash
+minikube dashboard
+```
+
 
 ---
 
@@ -190,7 +191,7 @@ minikube service frontend -n 3tier-app
 
   * Postgres data is stored in a PersistentVolumeClaim (`postgres-pvc`)
   * Data remains intact even if pods are restarted
-  
+
 * **Minikube NodePort**
 
   * Frontend is exposed via NodePort for browser access
