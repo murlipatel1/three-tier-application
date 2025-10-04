@@ -1,8 +1,4 @@
-Perfect! Here’s a **complete README.md** tailored for your 3-tier Todo App, covering **app overview → Docker → Kubernetes → helper scripts**, written so a new user can follow it easily.
 
----
-
-````markdown
 # 3-Tier Todo App
 
 This repository contains a **3-tier Todo application** with **frontend**, **backend**, and **Postgres database**, fully containerized with Docker and deployable on Kubernetes (Minikube). This README guides a new user through setup, Docker usage, Kubernetes deployment, and provided helper scripts.
